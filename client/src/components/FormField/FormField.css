@@ -1,0 +1,70 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--spacing-4);
+  width: 100%;
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.required-mark {
+  color: var(--color-danger);
+}
+
+.form-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.form-input-wrapper .input.has-prefix {
+  padding-left: 36px;
+}
+
+.form-input-wrapper .input.has-suffix {
+  padding-right: 36px;
+}
+
+.form-field.has-error .input,
+.form-field.has-error .select,
+.form-field.has-error .textarea {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1);
+}
+
+.form-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  margin-top: 2px;
+}
+
+.form-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

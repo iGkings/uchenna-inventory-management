@@ -1,0 +1,234 @@
+.dashboard-root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-welcome-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.welcome-heading {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.welcome-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Stat Cards Grid */
+.stat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Middle Analytics Section: Chart (7) + Recent Movements (5) */
+.dashboard-middle-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Recent Movements Card */
+.recent-movements-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  height: 100%;
+}
+
+.movements-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.movements-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.movements-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 170px;
+}
+
+.movements-search-input {
+  width: 100%;
+  padding: 4px 8px 4px 24px;
+  font-size: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+}
+
+.movements-table-wrapper {
+  overflow-x: auto;
+  flex: 1;
+}
+
+.movements-table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+.movements-table th {
+  padding: 8px 10px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 500;
+}
+
+.movements-table td {
+  padding: 10px 10px;
+  border-bottom: 1px solid #F1F5F9;
+  vertical-align: middle;
+}
+
+.movements-table tr:last-child td {
+  border-bottom: none;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-thumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  background-color: #F8FAFC;
+}
+
+.product-thumb-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.product-name-txt {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.qty-pill-in {
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.qty-pill-out {
+  font-weight: 600;
+  color: var(--color-danger);
+}
+
+.user-avatar-tiny {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.user-avatar-placeholder {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-navy);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Critical Stock Alert Banner */
+.stock-alert-section {
+  background-color: var(--color-surface);
+  border: 1px solid #FED7AA;
+  border-left: 5px solid var(--color-orange);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-shadow: var(--shadow-xs);
+}
+
+.alert-info-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alert-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-orange-subtle);
+  color: var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.alert-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.alert-desc {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .stat-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-middle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stat-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

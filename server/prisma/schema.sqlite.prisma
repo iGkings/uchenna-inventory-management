@@ -1,0 +1,90 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id           String              @id @default(uuid())
+  email        String              @unique
+  passwordHash String
+  name         String
+  role         String              @default("ADMIN") // ADMIN, MANAGER, STAFF
+  avatar       String?
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  movements    InventoryMovement[]
+  auditLogs    AuditLog[]
+
+  @@map("users")
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  slug        String    @unique
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  products    Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id           String              @id @default(uuid())
+  name         String
+  sku          String              @unique
+  description  String?
+  unitPrice    Float
+  quantity     Int                 @default(0)
+  reorderLevel Int                 @default(10)
+  imageUrl     String?
+  categoryId   String
+  category     Category            @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  movements    InventoryMovement[]
+
+  @@index([categoryId])
+  @@index([sku])
+  @@map("products")
+}
+
+model InventoryMovement {
+  id               String   @id @default(uuid())
+  productId        String
+  product          Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  type             String   // IN, OUT, ADJUSTMENT
+  quantity         Int      // Positive number representing units moved
+  previousQuantity Int
+  newQuantity      Int
+  reason           String   // Restock, Sale, Damage, Count Reconciliation, Initial Stock, Return
+  referenceNote    String?
+  userId           String?
+  user             User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  createdAt        DateTime @default(now())
+
+  @@index([productId])
+  @@index([createdAt])
+  @@map("inventory_movements")
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String   // LOGIN, LOGOUT, CREATE_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT, ADJUST_STOCK, CREATE_CATEGORY, UPDATE_CATEGORY, DELETE_CATEGORY
+  entity    String   // Auth, Product, Category, Inventory
+  entityId  String?
+  details   String?  // JSON string or summary
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}

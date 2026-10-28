@@ -1,0 +1,61 @@
+.stock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.stock-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* In Stock (Emerald Green) */
+.badge-in-stock {
+  background-color: var(--color-green-subtle);
+  color: var(--color-green);
+}
+.badge-in-stock .stock-badge-dot {
+  background-color: var(--color-green);
+}
+
+/* Low Stock (Amber) */
+.badge-low-stock {
+  background-color: var(--color-warning-subtle);
+  color: var(--color-warning);
+}
+.badge-low-stock .stock-badge-dot {
+  background-color: var(--color-warning);
+}
+
+/* Out of Stock (Red) */
+.badge-out-of-stock {
+  background-color: var(--color-danger-subtle);
+  color: var(--color-danger);
+}
+.badge-out-of-stock .stock-badge-dot {
+  background-color: var(--color-danger);
+}
+
+/* Movement Pills matching reference screenshot */
+.badge-movement-in {
+  background-color: #E6F7F0;
+  color: #159A63;
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.badge-movement-out {
+  background-color: #FDE8E8;
+  color: #E02424;
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}

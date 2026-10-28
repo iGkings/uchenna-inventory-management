@@ -1,0 +1,37 @@
+.confirm-dialog-content {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.confirm-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.confirm-icon-danger {
+  background-color: var(--color-danger-subtle);
+  color: var(--color-danger);
+}
+
+.confirm-icon-warning {
+  background-color: var(--color-warning-subtle);
+  color: var(--color-warning);
+}
+
+.confirm-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.confirm-message {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}

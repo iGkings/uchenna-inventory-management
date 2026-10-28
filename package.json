@@ -1,0 +1,27 @@
+{
+  "name": "uchenna-inventory-management",
+  "version": "1.0.0",
+  "description": "Uchenna Inventory Management System - iGkings Innovation",
+  "main": "server/src/server.js",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "seed": "npm run prisma:seed --prefix server",
+    "test": "npm test --prefix client && npm test --prefix server",
+    "test:client": "npm test --prefix client",
+    "test:server": "npm test --prefix server"
+  },
+  "keywords": [
+    "inventory-management",
+    "igkings-innovation",
+    "react",
+    "express",
+    "postgresql",
+    "prisma"
+  ],
+  "author": "Uchenna (iGkings Innovation)",
+  "license": "MIT"
+}

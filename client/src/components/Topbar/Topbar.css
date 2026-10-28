@@ -1,0 +1,75 @@
+.topbar-header {
+  height: var(--topbar-height);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-menu-toggle {
+  display: none;
+  color: var(--color-text-secondary);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.topbar-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-page-icon {
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+}
+
+.topbar-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-timestamp {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .topbar-header {
+    padding: 0 16px;
+  }
+
+  .topbar-menu-toggle {
+    display: flex;
+  }
+
+  .topbar-timestamp {
+    display: none;
+  }
+}

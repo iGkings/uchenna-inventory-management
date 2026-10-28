@@ -1,0 +1,95 @@
+:root {
+  /* Brand Core Colors */
+  --color-navy: #06274B;
+  --color-navy-dark: #03172E;
+  --color-navy-light: #0E3D73;
+  --color-navy-subtle: #EDF3F9;
+
+  --color-orange: #FF941F;
+  --color-orange-hover: #E88310;
+  --color-orange-subtle: #FFF7ED;
+
+  --color-green: #159A63;
+  --color-green-hover: #107C4F;
+  --color-green-subtle: #ECFDF5;
+
+  /* Neutrals & Surfaces */
+  --color-bg: #F7F9FC;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+  --color-surface-subtle: #F1F5F9;
+
+  /* Typography */
+  --color-text-primary: #152238;
+  --color-text-secondary: #667085;
+  --color-text-muted: #94A3B8;
+  --color-text-inverse: #FFFFFF;
+
+  /* Borders & Dividers */
+  --color-border: #E4E9F0;
+  --color-border-hover: #CBD5E1;
+  --color-border-focus: #FF941F;
+
+  /* Status Colors */
+  --color-warning: #D97706;
+  --color-warning-subtle: #FFFBEB;
+  --color-danger: #DC2626;
+  --color-danger-subtle: #FEF2F2;
+  --color-info: #0284C7;
+  --color-info-subtle: #F0F9FF;
+
+  /* Typography Scale */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing Scale */
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 0.75rem;  /* 12px */
+  --spacing-4: 1rem;     /* 16px */
+  --spacing-5: 1.25rem;  /* 20px */
+  --spacing-6: 1.5rem;   /* 24px */
+  --spacing-8: 2rem;     /* 32px */
+  --spacing-10: 2.5rem;  /* 40px */
+  --spacing-12: 3rem;    /* 48px */
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Box Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(16, 24, 40, 0.1), 0 1px 2px -1px rgba(16, 24, 40, 0.1);
+  --shadow-md: 0 4px 8px -2px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04);
+  --shadow-lg: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-xl: 0 20px 24px -4px rgba(16, 24, 40, 0.08), 0 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Constants */
+  --sidebar-width: 240px;
+  --topbar-height: 70px;
+  --z-sticky: 100;
+  --z-header: 500;
+  --z-drawer: 800;
+  --z-modal: 1000;
+  --z-toast: 1500;
+}

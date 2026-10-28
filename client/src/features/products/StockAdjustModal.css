@@ -1,0 +1,91 @@
+.stock-adjust-summary {
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adjust-product-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.adjust-product-name {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.adjust-product-sku {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.adjust-counts-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.count-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count-label {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.count-val {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.count-val.current { color: var(--color-navy); }
+.count-val.projected { color: var(--color-green); }
+.count-val.projected-danger { color: var(--color-danger); }
+
+.type-selector-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.type-pill {
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.type-pill.active-in {
+  background-color: var(--color-green-subtle);
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+
+.type-pill.active-out {
+  background-color: var(--color-danger-subtle);
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.type-pill.active-adj {
+  background-color: var(--color-warning-subtle);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
